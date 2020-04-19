@@ -20157,7 +20157,7 @@ MonoBehaviour:
   TwoFactorWidget: {fileID: 114885870854110436}
   CustomWidget: {fileID: 114213089377510072}
   HighlightPrefab: {fileID: 100000, guid: d78a484c6e87f1b47b6596ac080fe942, type: 2}
-  AudioVolume: 0.25
+  AudioVolume: 0.5
   AudioClips:
   - {fileID: 8300000, guid: 617a6f2ae08c7ef42a34035e1f18495f, type: 3}
   - {fileID: 8300000, guid: cd50cff6049a4434383cbed4fbb0411e, type: 3}
