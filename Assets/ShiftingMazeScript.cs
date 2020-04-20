@@ -102,17 +102,17 @@ public class ShiftingMazeScript : MonoBehaviour
             Kelp = Bravo[UnityEngine.Random.Range(0, Bravo.Count())];
         }
 
-        else if (Copper[0][0] == 0 && Copper[0][1] == 9)
+        else if (Copper[0][0] == 0 && Copper[0][1] == 5)
         {
             Kelp = Charlie[UnityEngine.Random.Range(0, Charlie.Count())];
         }
 
-        else if (Copper[0][0] == 9 && Copper[0][1] == 0)
+        else if (Copper[0][0] == 5 && Copper[0][1] == 0)
         {
             Kelp = Delta[UnityEngine.Random.Range(0, Delta.Count())];
         }
 
-        else if (Copper[0][0] == 9 && Copper[0][1] == 9)
+        else if (Copper[0][0] == 5 && Copper[0][1] == 5)
         {
             Kelp = Echo[UnityEngine.Random.Range(0, Echo.Count())];
         }
@@ -122,12 +122,12 @@ public class ShiftingMazeScript : MonoBehaviour
             Kelp = Foxtrot[UnityEngine.Random.Range(0, Foxtrot.Count())];
         }
 
-        else if (Copper[0][0] == 9)
+        else if (Copper[0][0] == 5)
         {
             Kelp = Golf[UnityEngine.Random.Range(0, Golf.Count())];
         }
 
-        else if (Copper[0][1] == 9)
+        else if (Copper[0][1] == 5)
         {
             Kelp = Hotel[UnityEngine.Random.Range(0, Hotel.Count())];
         }
@@ -248,7 +248,7 @@ public class ShiftingMazeScript : MonoBehaviour
 
             if (Movement == 1)
             {
-                if (Copper[0][0] == 9 || Kelp == "B" || Kelp == "G" || Kelp == "H" || Kelp == "J" || Kelp == "K" || Kelp == "M" || Kelp == "N")
+                if (Copper[0][0] == 5 || Kelp == "B" || Kelp == "G" || Kelp == "H" || Kelp == "J" || Kelp == "K" || Kelp == "M" || Kelp == "N")
                 {
                     StartCoroutine(Incorrect());
                 }
@@ -269,7 +269,7 @@ public class ShiftingMazeScript : MonoBehaviour
 
             if (Movement == 2)
             {
-                if (Copper[0][1] == 9 || Kelp == "A" || Kelp == "F" || Kelp == "G" || Kelp == "I" || Kelp == "L" || Kelp == "M" || Kelp == "N")
+                if (Copper[0][1] == 5 || Kelp == "A" || Kelp == "F" || Kelp == "G" || Kelp == "I" || Kelp == "L" || Kelp == "M" || Kelp == "N")
                 {
                     StartCoroutine(Incorrect());
                 }
@@ -600,7 +600,7 @@ public class ShiftingMazeScript : MonoBehaviour
                     Copper[2][c] = UnityEngine.Random.Range(0, Alphabreak.Count());
                     Seedling.text += Alphabreak[Copper[2][c]];
                 }
-                Copper[a][b] = ((Copper[2][0] * 64) + (Copper[2][1])) % 10;
+                Copper[a][b] = ((Copper[2][0] * 64) + (Copper[2][1])) % 6;
             }
         }
         Debug.LogFormat("[Shifting Maze #{2}] Your starting coordinance is: {0}, {1}", Copper[0][0].ToString(), Copper[0][1].ToString(), moduleId);
