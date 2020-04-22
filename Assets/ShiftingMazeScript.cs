@@ -75,7 +75,7 @@ public class ShiftingMazeScript : MonoBehaviour
         Random();
     }
 
-    string[] Alfa = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N" }; //Center
+    string[] Alfa = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O" }; //Center
     string[] Bravo = { "E", "K", "L" }; //Top Left
     string[] Charlie = { "F", "L", "M" }; //Top Right
     string[] Delta = { "H", "K", "N" }; //Bottom Left
@@ -211,6 +211,11 @@ public class ShiftingMazeScript : MonoBehaviour
 		{
 			Debug.LogFormat("[Shifting Maze #{0}] Current wall on your cell: East/South/West", moduleId);
 		}
+		
+		else if (Kelp == "O")
+		{
+			Debug.LogFormat("[Swtiching Maze #{0}] Current wall on your cell: -", moduleId);
+		}
     }
 
     void Sender()
@@ -227,6 +232,7 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             if (Movement == 0)
             {
+				Debug.LogFormat("[Shifting Maze #{0}] You moved north.", moduleId);
                 if (Copper[0][0] == 0 || Kelp == "D" || Kelp == "E" || Kelp == "F" || Kelp == "J" || Kelp == "K" || Kelp == "L" || Kelp == "M")
                 {
                     StartCoroutine(Incorrect());
@@ -240,7 +246,6 @@ public class ShiftingMazeScript : MonoBehaviour
                         Steppers[q].SetActive(false);
                     }
                     StartCoroutine(Stepyard());
-					Debug.LogFormat("[Shifting Maze #{0}] You moved north.", moduleId);
 					Debug.LogFormat("[Shifting Maze #{2}] Your are currently on: {0}, {1}", Copper[0][0].ToString(), Copper[0][1].ToString(), moduleId);
 					Random();
                 }
@@ -248,6 +253,7 @@ public class ShiftingMazeScript : MonoBehaviour
 
             if (Movement == 1)
             {
+				Debug.LogFormat("[Shifting Maze #{0}] You moved south.", moduleId);
                 if (Copper[0][0] == 5 || Kelp == "B" || Kelp == "G" || Kelp == "H" || Kelp == "J" || Kelp == "K" || Kelp == "M" || Kelp == "N")
                 {
                     StartCoroutine(Incorrect());
@@ -260,7 +266,6 @@ public class ShiftingMazeScript : MonoBehaviour
                     {
                         Steppers[q].SetActive(false);
                     }
-					Debug.LogFormat("[Shifting Maze #{0}] You moved south.", moduleId);
 					Debug.LogFormat("[Shifting Maze #{2}] Your are currently on: {0}, {1}", Copper[0][0].ToString(), Copper[0][1].ToString(), moduleId);
                     StartCoroutine(Stepyard());
 					Random();
@@ -269,6 +274,7 @@ public class ShiftingMazeScript : MonoBehaviour
 
             if (Movement == 2)
             {
+				Debug.LogFormat("[Shifting Maze #{0}] You moved east.", moduleId);
                 if (Copper[0][1] == 5 || Kelp == "A" || Kelp == "F" || Kelp == "G" || Kelp == "I" || Kelp == "L" || Kelp == "M" || Kelp == "N")
                 {
                     StartCoroutine(Incorrect());
@@ -281,7 +287,6 @@ public class ShiftingMazeScript : MonoBehaviour
                     {
                         Steppers[q].SetActive(false);
                     }
-					Debug.LogFormat("[Shifting Maze #{0}] You moved east.", moduleId);
 					Debug.LogFormat("[Shifting Maze #{2}] Your are currently on: {0}, {1}", Copper[0][0].ToString(), Copper[0][1].ToString(), moduleId);
                     StartCoroutine(Stepyard());
 					Random();
@@ -290,6 +295,7 @@ public class ShiftingMazeScript : MonoBehaviour
 
             if (Movement == 3)
             {
+				Debug.LogFormat("[Shifting Maze #{0}] You moved west.", moduleId);
                 if (Copper[0][1] == 0 || Kelp == "C" || Kelp == "E" || Kelp == "H" || Kelp == "I" || Kelp == "K" || Kelp == "L" || Kelp == "N")
                 {
                     StartCoroutine(Incorrect());
@@ -303,7 +309,6 @@ public class ShiftingMazeScript : MonoBehaviour
                         Steppers[q].SetActive(false);
                     }
                     StartCoroutine(Stepyard());
-					Debug.LogFormat("[Shifting Maze #{0}] You moved west.", moduleId);
 					Debug.LogFormat("[Shifting Maze #{2}] Your are currently on: {0}, {1}", Copper[0][0].ToString(), Copper[0][1].ToString(), moduleId);
 					Random();
                 }
@@ -562,6 +567,24 @@ public class ShiftingMazeScript : MonoBehaviour
             Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
+		
+		else if (Kelp == "O")
+        {
+            yield return new WaitForSecondsRealtime(0.4f);
+            Audio.PlaySoundAtTransform(SFX[1].name, transform);
+            Stepping[0].SetActive(false);
+            yield return new WaitForSecondsRealtime(0.4f);
+            Audio.PlaySoundAtTransform(SFX[1].name, transform);
+            Stepping[2].SetActive(false);
+            yield return new WaitForSecondsRealtime(0.4f);
+            Audio.PlaySoundAtTransform(SFX[1].name, transform);
+            Stepping[1].SetActive(false);
+            yield return new WaitForSecondsRealtime(0.4f);
+            Audio.PlaySoundAtTransform(SFX[1].name, transform);
+            Stepping[3].SetActive(false);
+            yield return new WaitForSecondsRealtime(0.4f);
+        }
+		
         for (int q = 0; q < 4; q++)
         {
             Steppers[q].SetActive(true);
