@@ -13,6 +13,7 @@ public class ShiftingMazeScript : MonoBehaviour
     public KMBombModule Module;
 
     public AudioClip[] SFX;
+	public AudioSource Digger;
 
     public KMSelectable[] Steps;
     public GameObject[] Stepping;
@@ -351,16 +352,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 
@@ -368,16 +365,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 
@@ -385,16 +378,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 
@@ -402,16 +391,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 
@@ -419,16 +404,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 
@@ -436,16 +417,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 
@@ -453,16 +430,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 
@@ -470,16 +443,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 
@@ -487,16 +456,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 
@@ -504,16 +469,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 
@@ -521,16 +482,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 
@@ -538,15 +495,11 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
-            Stepping[3].SetActive(false);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
             yield return new WaitForSecondsRealtime(0.4f);
         }
@@ -555,16 +508,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 		
@@ -572,16 +521,12 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[0].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[2].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[1].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            Stepping[3].SetActive(false);
             yield return new WaitForSecondsRealtime(0.4f);
         }
 		
@@ -626,6 +571,7 @@ public class ShiftingMazeScript : MonoBehaviour
                 Copper[a][b] = ((Copper[2][0] * 64) + (Copper[2][1])) % 6;
             }
         }
+		Debug.LogFormat("[Shifting Maze #{0}] {1}", moduleId, Seedling.text);
         Debug.LogFormat("[Shifting Maze #{2}] Your starting coordinance is: {0}, {1}", Copper[0][0].ToString(), Copper[0][1].ToString(), moduleId);
         Debug.LogFormat("[Shifting Maze #{2}] Your destination is: {0}, {1}", Copper[1][0].ToString(), Copper[1][1].ToString(), moduleId);
     }
@@ -641,9 +587,10 @@ public class ShiftingMazeScript : MonoBehaviour
         }
         Audio.PlaySoundAtTransform(SFX[3].name, transform);
         yield return new WaitForSecondsRealtime(1.8f);
-        Audio.PlaySoundAtTransform(SFX[4].name, transform);
-        for (int c = 0; c < 620; c++)
-        {
+		Digger.clip = SFX[4];
+		Digger.Play();
+        while (Digger.isPlaying)
+		{
             Seedling.text = "SEED: ";
             for (int f = 0; f < 8; f++)
             {
@@ -677,9 +624,10 @@ public class ShiftingMazeScript : MonoBehaviour
         }
         Audio.PlaySoundAtTransform(SFX[6].name, transform);
         yield return new WaitForSecondsRealtime(.75f);
-        Audio.PlaySoundAtTransform(SFX[4].name, transform);
-        for (int c = 0; c < 620; c++)
-        {
+		Digger.clip = SFX[4];
+		Digger.Play();
+		while (Digger.isPlaying)
+		{
             Seedling.text = "SEED: ";
             for (int f = 0; f < 8; f++)
             {
