@@ -331,203 +331,204 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             Steppers[q].SetActive(false);
         }
+		
         if (Kelp == "A")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
             Stepping[0].SetActive(false);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
             Stepping[2].SetActive(false);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
             Stepping[1].SetActive(false);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
             Stepping[3].SetActive(false);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "B")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "C")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "D")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "E")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "F")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "G")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "H")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "I")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "J")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "K")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "L")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "M")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 
         else if (Kelp == "N")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[2].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 		
 		else if (Kelp == "O")
         {
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
             Audio.PlaySoundAtTransform(SFX[1].name, transform);
-            yield return new WaitForSecondsRealtime(0.4f);
+            yield return new WaitForSecondsRealtime(0.8f);
         }
 		
         for (int q = 0; q < 4; q++)
