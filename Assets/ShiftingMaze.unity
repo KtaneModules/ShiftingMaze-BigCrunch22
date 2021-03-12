@@ -233,42 +233,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 102995231974340384, guid: 4b09011bd60735741b4a89474773f678,
-        type: 2}
-      propertyPath: m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: a345438832810044c9e0c3418d2b3ee3,
-        type: 3}
-    - target: {fileID: 23417142693977800, guid: 4b09011bd60735741b4a89474773f678,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: cd3d55d44f586a947aefeebc27bcd597, type: 2}
-    - target: {fileID: 23919219465851950, guid: 4b09011bd60735741b4a89474773f678,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: cd3d55d44f586a947aefeebc27bcd597, type: 2}
-    - target: {fileID: 102238125708994806, guid: 4b09011bd60735741b4a89474773f678,
-        type: 2}
-      propertyPath: m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: a345438832810044c9e0c3418d2b3ee3,
-        type: 3}
-    - target: {fileID: 102995231974340384, guid: 4b09011bd60735741b4a89474773f678,
-        type: 2}
-      propertyPath: m_FontSize
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 4845123167994490, guid: 4b09011bd60735741b4a89474773f678, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.0037
-      objectReference: {fileID: 0}
-    - target: {fileID: 102238125708994806, guid: 4b09011bd60735741b4a89474773f678,
-        type: 2}
-      propertyPath: m_FontSize
-      value: 130
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b09011bd60735741b4a89474773f678, type: 2}
   m_IsPrefabParent: 0
