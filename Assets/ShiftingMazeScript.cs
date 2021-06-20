@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
-using KModkit;
 
 public class ShiftingMazeScript : MonoBehaviour
 {
@@ -215,7 +213,7 @@ public class ShiftingMazeScript : MonoBehaviour
 		
 		else if (Kelp == "O")
 		{
-			Debug.LogFormat("[Swtiching Maze #{0}] Current wall on your cell: -", moduleId);
+			Debug.LogFormat("[Shifting Maze #{0}] Current wall on your cell: -", moduleId);
 		}
     }
 
@@ -551,6 +549,7 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             Steppers[q].SetActive(true);
         }
+        yield return new WaitForSecondsRealtime(0.35f);
         MovingAgain = false;
 		MicUsed = false;
 		TakingAStep = false;
@@ -580,6 +579,7 @@ public class ShiftingMazeScript : MonoBehaviour
     IEnumerator Incorrect()
     {
 		Debug.LogFormat("[Shifting Maze #{0}] You slammed on a wall. The mazing is now moving.", moduleId);
+        IncorrectMove = true;
         MovingAgain = true;
 		MazeMoving = true;
         for (int q = 0; q < 6; q++)
@@ -609,6 +609,7 @@ public class ShiftingMazeScript : MonoBehaviour
         {
             Steppers[q].SetActive(true);
         }
+        IncorrectMove = false;
         MovingAgain = false;
 		MazeMoving = false;
 		MicUsed = false;
@@ -617,6 +618,10 @@ public class ShiftingMazeScript : MonoBehaviour
     IEnumerator ActualStep()
     {
 		Debug.LogFormat("[Shifting Maze #{0}] You activated your current platform. The maze is now moving.", moduleId);
+        if (Copper[0][0] == Copper[1][0] && Copper[0][1] == Copper[1][1])
+            CorrectMove = true;
+        else
+            IncorrectMove = true;
         MovingAgain = true;
 		MazeMoving = true;
         for (int q = 0; q < 6; q++)
@@ -660,7 +665,11 @@ public class ShiftingMazeScript : MonoBehaviour
             }
             MovingAgain = false;
         }
-		MazeMoving = false;
+        if (Copper[0][0] == Copper[1][0] && Copper[0][1] == Copper[1][1])
+            CorrectMove = false;
+        else
+            IncorrectMove = false;
+        MazeMoving = false;
 		MicUsed = false;
     }
 	
@@ -673,8 +682,10 @@ public class ShiftingMazeScript : MonoBehaviour
 	bool MicUsed = false;
 	bool TakingAStep = false;
 	bool MazeMoving = false;
-	
-	IEnumerator ProcessTwitchCommand(string command)
+    bool IncorrectMove = false;
+    bool CorrectMove = false;
+
+    IEnumerator ProcessTwitchCommand(string command)
 	{
 		string[] parameters = command.Split(' ');
 		if (Regex.IsMatch(command, @"^\s*mic\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant) || Regex.IsMatch(command, @"^\s*microphone\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
@@ -821,4 +832,127 @@ public class ShiftingMazeScript : MonoBehaviour
 			SendIt.OnInteract();
 		}
 	}
+
+    IEnumerator TwitchHandleForcedSolve()
+    {
+        if (IncorrectMove)
+        {
+            StopAllCoroutines();
+            Digger.Stop();
+            Audio.PlaySoundAtTransform(SFX[5].name, transform);
+            Module.HandlePass();
+            ModuleSolved = true;
+            Seedling.text = "";
+            yield return new WaitForSecondsRealtime(1f);
+            Audio.PlaySoundAtTransform(SFX[7].name, transform);
+        }
+        else if (!CorrectMove)
+        {
+            if (Copper[0][0] != Copper[1][0] || Copper[0][1] != Copper[1][1])
+            {
+                keepGoing:
+                List<int> valids = new List<int>();
+                List<int> goodValids = new List<int>();
+                if (Kelp == "A")
+                {
+                    valids.Add(0);
+                    valids.Add(1);
+                    valids.Add(3);
+                }
+                else if (Kelp == "B")
+                {
+                    valids.Add(0);
+                    valids.Add(2);
+                    valids.Add(3);
+                }
+                else if (Kelp == "C")
+                {
+                    valids.Add(0);
+                    valids.Add(1);
+                    valids.Add(2);
+                }
+                else if (Kelp == "D")
+                {
+                    valids.Add(1);
+                    valids.Add(2);
+                    valids.Add(3);
+                }
+                else if (Kelp == "E")
+                {
+                    valids.Add(1);
+                    valids.Add(2);
+                }
+                else if (Kelp == "F")
+                {
+                    valids.Add(1);
+                    valids.Add(3);
+                }
+                else if (Kelp == "G")
+                {
+                    valids.Add(0);
+                    valids.Add(3);
+                }
+                else if (Kelp == "H")
+                {
+                    valids.Add(0);
+                    valids.Add(2);
+                }
+                else if (Kelp == "I")
+                {
+                    valids.Add(0);
+                    valids.Add(1);
+                }
+                else if (Kelp == "J")
+                {
+                    valids.Add(2);
+                    valids.Add(3);
+                }
+                else if (Kelp == "K")
+                {
+                    valids.Add(2);
+                }
+                else if (Kelp == "L")
+                {
+                    valids.Add(1);
+                }
+                else if (Kelp == "M")
+                {
+                    valids.Add(3);
+                }
+                else if (Kelp == "N")
+                {
+                    valids.Add(0);
+                }
+                else if (Kelp == "O")
+                {
+                    valids.Add(0);
+                    valids.Add(1);
+                    valids.Add(2);
+                    valids.Add(3);
+                }
+                for (int i = 0; i < valids.Count; i++)
+                {
+                    int newX = Copper[1][0] - Copper[0][0];
+                    int newY = Copper[1][1] - Copper[0][1];
+                    if (newX < 0 && valids[i] == 0)
+                        goodValids.Add(valids[i]);
+                    else if (newX > 0 && valids[i] == 1)
+                        goodValids.Add(valids[i]);
+                    else if (newY > 0 && valids[i] == 2)
+                        goodValids.Add(valids[i]);
+                    else if (newY < 0 && valids[i] == 3)
+                        goodValids.Add(valids[i]);
+                }
+                if (goodValids.Count != 0)
+                    Steps[goodValids.PickRandom()].OnInteract();
+                else
+                    Steps[valids.PickRandom()].OnInteract();
+                while (TakingAStep) yield return true;
+                if (Copper[0][0] != Copper[1][0] || Copper[0][1] != Copper[1][1])
+                    goto keepGoing;
+            }
+            SendIt.OnInteract();
+        }
+        while (!ModuleSolved) yield return true;
+    }
 }
